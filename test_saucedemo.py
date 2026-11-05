@@ -42,3 +42,12 @@ def test_login_with_locked_out_user(page: Page):
     page.locator("#password").fill("secret_sauce")
     page.locator("#login-button").click()
     expect(page.locator('[data-test="error"]')).to_have_text("Epic sadface: Sorry, this user has been locked out.")
+
+
+def test_add_product_to_cart(page: Page):
+    page.goto("https://www.saucedemo.com")
+    page.locator("#user-name").fill("standard_user")
+    page.locator("#password").fill("secret_sauce")
+    page.locator("#login-button").click()
+    page.locator("#add-to-cart-sauce-labs-backpack").click()
+    expect(page.locator('[data-test="shopping-cart-badge"]')).to_have_text("1")
