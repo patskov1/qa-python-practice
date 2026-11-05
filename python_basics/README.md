@@ -15,9 +15,9 @@ Test automation project created while learning QA Automation with Python.
 - GitHub Actions (CI)
 
 ## Project structure
-- `pages/` – Page Objects (locators and actions for each page)
-- `tests/` – UI and API tests
-- `.github/workflows/` – CI configuration
+- `../pages` – Page Objects (locators and actions for each page)
+- `tests` – UI and API tests
+- `../.github/workflows` – CI configuration
 
 ## How to run
 1. Install dependencies:
